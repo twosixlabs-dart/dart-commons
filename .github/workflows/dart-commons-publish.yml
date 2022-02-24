@@ -1,0 +1,14 @@
+name: DART commons publish
+
+on:
+  push:
+    branches: [ DART-1314-adding-github-actions ]
+  pull_request:
+    branches: [ DART-1314-adding-github-actions ]
+
+jobs:
+  build:
+    runs-on: mozilla/sbt:8u292_1.5.7
+    steps:
+      - name: Run tests
+        run: sbt test
