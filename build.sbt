@@ -14,7 +14,8 @@ crossScalaVersions in ThisBuild := Seq( "2.11.12", "2.12.7" )
 
 test in publish in ThisBuild := {}
 test in publishLocal in ThisBuild := {}
-publishMavenStyle := true
+
+//publishMavenStyle := true
 
 lazy val root = ( project in file( "." ) ).aggregate( awsCommon, json, cli, testBase, utils, exceptions, sql )
 
@@ -50,3 +51,20 @@ lazy val sql = ( project in file( "dart-sql" ) ).settings( libraryDependencies +
 
 javacOptions in ThisBuild ++= Seq( "-source", "8", "-target", "8" )
 scalacOptions in ThisBuild += "-target:jvm-1.8"
+
+inThisBuild(List(
+    organization := "com.twosixlabs",
+    homepage := Some(url("https://github.com/twosixlabs-dart/dart-commons")),
+    licenses := List("GNU-Affero-3.0" -> url("https://www.gnu.org/licenses/agpl-3.0.en.html")),
+    developers := List(
+        Developer(
+            "twosixlabs-dart",
+            "Two Six Labs",
+            "",
+            url("https://github.com/twosixlabs-dart")
+            )
+        )
+    ))
+
+sonatypeCredentialHost := "s01.oss.sonatype.org"
+sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
