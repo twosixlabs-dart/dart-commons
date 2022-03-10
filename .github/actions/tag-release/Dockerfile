@@ -1,6 +1,4 @@
-FROM alpine:latest
-
-RUN apk add --no-cache git
+FROM bash:5.1
 
 COPY tag-release.sh /tag-release.sh
 
