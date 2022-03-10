@@ -16,10 +16,13 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - name: Run tests
-        run: sbt ci-release
-        env:
-          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
-          PGP_SECRET: ${{ secrets.PGP_SECRET }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+      - name: Tag a release
+-        uses: ./github/actions/tag-release
+
+#      - name: Publishing to Sonatype
+#        run: sbt ci-release
+#        env:
+#          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+#          PGP_SECRET: ${{ secrets.PGP_SECRET }}
+#          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+#          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
