@@ -1,7 +1,6 @@
 name: Tag a DART version
 description: Push a Git tag.
 author: Two Six Tech DART Team
-inputs:
 runs:
   using: docker
   image: Dockerfile
