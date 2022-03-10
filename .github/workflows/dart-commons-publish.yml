@@ -17,7 +17,7 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
       - name: Tag a release
--        uses: ./github/actions/tag-release
+-       uses: ./github/actions/tag-release
 
 #      - name: Publishing to Sonatype
 #        run: sbt ci-release
