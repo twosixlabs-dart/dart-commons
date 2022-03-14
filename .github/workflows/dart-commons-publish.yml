@@ -1,8 +1,6 @@
 name: DART commons publish
 
-on:
-  push:
-    branches: [ DART-1314-adding-github-actions ]
+on: push
 
 jobs:
   build:
