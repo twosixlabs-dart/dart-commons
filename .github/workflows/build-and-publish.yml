@@ -44,6 +44,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           persist-credentials: false
       - name: Tag a release
-        uses: ./.github/actions/tag-release
+        uses: twosixlabs-dart/dart-tag-release@v3.0.10
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
