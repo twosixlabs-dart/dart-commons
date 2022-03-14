@@ -40,5 +40,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
+        with:
+          token: secrets.PERSONAL_ACCESS_TOKEN
+          persist-credentials: false
       - name: Tag a release
         uses: ./.github/actions/tag-release
