@@ -22,8 +22,8 @@ echo "Tagging Release Version: $releaseVersion"
 
 git checkout -b "release-$releaseVersion"
 
-#git add .
-#git commit -m "[CI/CD] Release v$releaseVersion"
-#
-#git tag "v$releaseVersion"
-#git push origin "v$releaseVersion"
+git add .
+git commit -m "[CI/CD] Release v$releaseVersion"
+
+git tag "v$releaseVersion"
+git push origin "v$releaseVersion"
