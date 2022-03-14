@@ -5,8 +5,8 @@ if [[ -z $GITHUB_RUN_NUMBER ]]; then
   exit 1
 fi
 
-git config user.name "${GITHUB_ACTOR}"
-git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+#git config user.name "${GITHUB_ACTOR}"
+#git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
 if [[ -n $RELEASE_VERSION ]]; then
   releaseVersion=$RELEASE_VERSION
@@ -17,6 +17,8 @@ else
   releaseVersion="${majorVersion}.${buildNumber}"
   echo "version in ThisBuild := \"$releaseVersion\"" > version.sbt
 fi
+
+#git remote set-url origin https://x-access-token:GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
 
 echo "Tagging Release Version: $releaseVersion"
 
