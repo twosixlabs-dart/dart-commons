@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3.0.0
         with:
-          token: secrets.PERSONAL_ACCESS_TOKEN
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           persist-credentials: false
       - name: Tag a release
         uses: ./.github/actions/tag-release
