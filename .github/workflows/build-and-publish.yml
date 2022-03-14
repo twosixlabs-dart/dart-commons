@@ -1,4 +1,4 @@
-name: DART commons publish
+name: Build and Publish
 
 on: push
 
