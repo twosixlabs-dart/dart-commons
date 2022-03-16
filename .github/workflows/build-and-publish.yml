@@ -36,7 +36,7 @@ jobs:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
 
   tag-release:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/DART-1314-adding-github-actions'
     needs: build
     runs-on: ubuntu-latest
     steps:
