@@ -53,7 +53,7 @@ javacOptions in ThisBuild ++= Seq( "-source", "8", "-target", "8" )
 scalacOptions in ThisBuild += "-target:jvm-1.8"
 
 inThisBuild(List(
-    organization := "com.twosixlabs",
+    organization := "com.twosixlabs.dart",
     homepage := Some(url("https://github.com/twosixlabs-dart/dart-commons")),
     licenses := List("GNU-Affero-3.0" -> url("https://www.gnu.org/licenses/agpl-3.0.en.html")),
     developers := List(
