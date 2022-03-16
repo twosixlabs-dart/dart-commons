@@ -52,7 +52,7 @@ lazy val sql = ( project in file( "dart-sql" ) ).settings( libraryDependencies +
 javacOptions in ThisBuild ++= Seq( "-source", "8", "-target", "8" )
 scalacOptions in ThisBuild += "-target:jvm-1.8"
 
-sonatypeProfileName := "com.twosixlabs.dart"
+sonatypeProfileName := "com.twosixlabs"
 inThisBuild(List(
     organization := "com.twosixlabs.dart",
     homepage := Some(url("https://github.com/twosixlabs-dart/dart-commons")),
